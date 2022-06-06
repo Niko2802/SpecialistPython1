@@ -30,4 +30,7 @@
 # 19 189.81 Rub.
 # 20 199.8 Rub.
 
-# TODO: your code here
+cost = float(input("Введите стоимость товара: "))
+for i in range(1, 21):
+    price = cost * i
+    print(i, "%.2f" % price)
