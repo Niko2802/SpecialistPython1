@@ -14,3 +14,13 @@
 #    #
 #    #
 ######
+length = int(input("Введите сторону квадрата больше 2, но меньше или равную 30: "))
+if length <= 2 or length > 30:
+    print("Вы ввели не верную длину стороны")
+else:
+    horizontal = "#" * length
+    print(horizontal)
+    vertical = "#" + " " * (length - 2) + "#"
+    for i in range(0, (length - 2)):
+        print(vertical)
+    print(horizontal)
