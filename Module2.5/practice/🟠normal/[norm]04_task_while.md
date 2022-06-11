@@ -22,7 +22,14 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("Введите число от 1 до 9: "))
+string_step = "1"
+i = 1
+while i <= n:
+    print(string_step)
+    i += 1
+    string_step = string_step + str(i)
+
 ```
 
 ---
