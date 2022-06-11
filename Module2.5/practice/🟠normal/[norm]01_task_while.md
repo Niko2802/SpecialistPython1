@@ -32,7 +32,14 @@ n = 5
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("Введите n больше 1, но меньше 20: "))
+count = 0
+step = "*"
+while count < n:
+    print(step)
+    step = step + "*"
+    count += 1
+
 ```
 
 ---
