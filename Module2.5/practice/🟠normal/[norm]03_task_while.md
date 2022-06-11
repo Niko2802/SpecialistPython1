@@ -20,7 +20,14 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("Введите целое положительное число: "))
+a = 1
+sum = 0
+while a <= n:
+    sum = sum + a * a
+    a += 1
+print("Сумма: ", sum)
+
 ```
 
 ---
