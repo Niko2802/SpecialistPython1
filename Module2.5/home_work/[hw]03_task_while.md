@@ -28,7 +28,17 @@ n = 5
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("Введите число от 1 до 9: "))
+a = 1
+b = 1
+while b <= n:
+    while a <= n:
+        print(a * b, end=" ")
+        a += 1
+    print()
+    a = 1
+    b += 1
+
 ```
 
 ---
