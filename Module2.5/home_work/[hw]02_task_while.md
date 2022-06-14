@@ -18,8 +18,20 @@
 ### Решение задачи
 
 ```python
-a = int(input("a: "))
-b = int(input("b: "))
+a = int(input("Введите число а: "))
+b = int(input("Введите число b: "))
+if a < b:
+    while a <= b:
+        if a % 5 == 0:
+            print(a)
+        a += 1
+elif a > b:
+    while b <= a:
+        if b % 5 == 0:
+            print(b)
+        b += 1
+else:
+    if a % 5 == 0:
+        print(a)
 
-# TODO: you code here...
 ```
