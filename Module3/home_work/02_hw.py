@@ -5,4 +5,14 @@
 import random
 numbers = []
 # print(random.randint(10, 20))  # раскомментируйте, чтобы посмотреть работу функции randint
-# TODO: your code here
+import random
+
+numbers = []
+#   print(random.randint(10, 20))  # раскомментируйте, чтобы посмотреть работу функции randint
+n = int(input("Введите n: "))
+a = 0
+while a < n:
+    numbers.append(random.randint(-100, 100))
+    a += 1
+print(numbers)
+
