@@ -3,4 +3,12 @@
 
 names = ["Иван", "Ирина", "Вячеслав", "Василий", "Петр"]
 
-# TODO: your code here
+names = ["Иван", "Ирина", "Вячеслав", "Василий", "Петр"]
+lenght_name = 0
+name = ""
+for item in names:
+    if len(item) > lenght_name:
+        lenght_name = len(item)
+        name = item
+print("Одно из самых длинных имен: ", name)
+
