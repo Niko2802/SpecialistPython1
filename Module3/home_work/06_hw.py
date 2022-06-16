@@ -31,15 +31,37 @@ items = [
         "price": 1700
     },
 ]
-# Найдите:
-print("Товары на складе представлены брэндами: ")
+brands = ""
+price = 0
+brands_max = 0
+brands_max_print = ""
+key_brand = ""
+price_max = 0
+brand_print = ""
 
-# TODO: your code here
+for key_items in items:
+    key_brand = key_items.get("brand")
+    if brands.find(key_brand) == -1:
+        brands = brands + " " + key_brand
+print("Товары на складе представлены брэндами: ", brands)
 
-print("На складе больше всего товаров брэнда(ов): ")
+brands = ""
+for key_items in items:
+    key_brand = key_items.get("brand")
+    brands = brands + " " + key_brand + " "
+for key_items in items:
+    key_brand = key_items.get("brand") + " "
+    if brands.count(key_brand) >= brands_max:
+        brands_max = brands.count(key_brand)
+    if brands.count(key_brand) >= brands_max and brands_max_print.find(key_brand) == -1:
+        brands_max_print = brands_max_print + " " + key_brand
+print("На складе больше всего товаров брэнда(ов): ", brands_max_print)
 
-# TODO: your code here
+for key_items in items:
+    key_brand = key_items.get("brand")
+    price_max = key_items.get("price")
+    if price_max > price:
+        brand_print = key_brand
+        price = price_max
+print("На складе самый дорогой товар брэнда(ов): ", brand_print)
 
-print("На складе самый дорогой товар брэнда(ов): ")
-
-# TODO: your code here
