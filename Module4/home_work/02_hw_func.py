@@ -5,9 +5,22 @@
 # При решении задачи необходимо использовать функцию расстояния между двумя точками.
 
 def distance(x1, y1, x2, y2):
-    # TODO: тело, которое вы реализовали на практической работе
-    pass
+    d = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
+    return d
 
 
-# TODO: your code here
-print("Самый короткий отрезок:", ...)  # Выводим название отрезка, например “АС”.
+xa = float(input("Введите координату x точки A: "))
+ya = float(input("Введите координату y точки A: "))
+xb = float(input("Введите координату x точки B: "))
+yb = float(input("Введите координату y точки B: "))
+xc = float(input("Введите координату x точки C: "))
+yc = float(input("Введите координату y точки C: "))
+ab = distance(xa, ya, xb, yb)
+bc = distance(xb, yb, xc, yc)
+ac = distance(xa, ya, xc, yc)
+if ab <= bc and ab <= ac:
+    print("Самый короткий отрезок - ab", ab)  # Выводим название отрезка, например “АС”.
+elif bc <= ab and bc <= ac:
+    print("Самый короткий отрезок - bc", bc)
+else:
+    print("Самый короткий отрезок - ac", ac)
