@@ -22,7 +22,14 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+file_name = ""
+with open("data/fruits.txt", "r", encoding="utf-8") as f:
+    for line in f:
+        if line.rstrip() != "":
+            file_name = "fruits_" + line.rstrip()[0] + ".txt"
+            with open(file_name, "a", encoding="utf-8") as f_letter:
+                f_letter.write(line)
+
 ```
 
 ---
