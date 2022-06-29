@@ -18,9 +18,13 @@
 ```python
 summa = 0
 with open("data/info.txt", "r") as f:
-    pass
-
+    for line in f:
+        if line.rstrip().isdigit():
+            summa += int(line.rstrip())
+        elif line.rstrip().replace("-", "", 1).isdigit():
+            summa -= int(line.rstrip().replace("-", "", 1))
 print(f"Сумма чисел = {summa}")
+
 # Уточнение: в сумму добавляем только те значения, которые можно преобразовать к int'у
 # Например: int("-26") --> -26, а int("--26") --> ошибка
 ```
