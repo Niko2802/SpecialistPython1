@@ -35,7 +35,15 @@ n = 6
 
 ```python
 n = int(input("n: "))
-# TODO: you code here...
+i = 0
+string = "*"
+with open("data/pyramid.txt", "a", encoding="utf-8") as f:
+    f.write(f"n = {n} \n")
+    while i < n:
+        i += 1
+        f.write(string.center(n * 2) + "\n")
+        string = string + "**"
+
 ```
 
 ---
